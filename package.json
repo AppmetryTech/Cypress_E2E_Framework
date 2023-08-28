@@ -1,0 +1,32 @@
+{
+  "name": "cypress_e2e_framework",
+  "version": "1.0.0",
+  "description": "Cypress E2E framework ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run:chrome": "cypress run --browser chrome --headed",
+    "cy:run:firefox": "cypress run --browser firefox --headed",
+    "cy:run:tradingview": "cypress run --browser chrome",
+    "runAll": "cypress run --browser chrome",
+    "registration": "cypress run --spec cypress\\e2e\\Registration\\01_register_success.cy.js --browser chrome --headed",
+    "cy:run:parallel": "cypress-parallel -s cy:run -t 3 -d cypress\\e2e\\practice_test\\*.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChetanMotghare/Cypress_E2E_Framework.git"
+  },
+  "author": "Chetan Motghare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChetanMotghare/Cypress_E2E_Framework/issues"
+  },
+  "homepage": "https://github.com/ChetanMotghare/Cypress_E2E_Framework#readme",
+  "devDependencies": {
+    "cypress": "^12.17.4"
+  },
+  "dependencies": {
+    "cypress-parallel": "^0.13.0",
+    "mochawesome": "^7.1.3"
+  }
+}

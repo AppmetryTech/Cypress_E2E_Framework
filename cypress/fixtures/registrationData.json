@@ -1,0 +1,15 @@
+{
+    "validUser": {
+      "firstName": "JohnSin",
+      "lastName": "DoeHold",
+      "email": "jhsdfn.does@gmail.com",
+      "password": "Tec@urepaord"
+    },
+    "invalidUser": {
+      "firstName": "Invalid",
+      "lastName": "User",
+      "email": "test@gmail.com",
+      "password": "weak"
+    }
+  }
+  
