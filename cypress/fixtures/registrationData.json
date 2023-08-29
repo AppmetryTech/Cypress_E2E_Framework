@@ -1,15 +1,23 @@
 {
     "validUser": {
-      "firstName": "JohnSin",
-      "lastName": "DoeHold",
-      "email": "jhsdfn.does@gmail.com",
+      "firstName": "TestUser",
+      "lastName": "LastName",
+      "gender":"female",
+      "date":"22",
+      "month":"3",
+      "year":"2000",
+      "email": "admisfddllsnsSD2wre@gmail.com",
       "password": "Tec@urepaord"
     },
-    "invalidUser": {
-      "firstName": "Invalid",
-      "lastName": "User",
-      "email": "test@gmail.com",
-      "password": "weak"
+    "existingEmail": {
+      "firstName": "TestUser",
+      "lastName": "LastName",
+      "gender":"female",
+      "date":"22",
+      "month":"3",
+      "year":"2000",
+      "email": "adminUserSD2wre@gmail.com",
+      "password": "Tec@urepaord"
     }
   }
-  
+   

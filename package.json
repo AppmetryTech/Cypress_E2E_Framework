@@ -4,7 +4,13 @@
   "description": "Cypress E2E framework ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports&& mkdir cypress\\reports\\mochareports",
+    "pretest": "npm run clean:reports",
+    "scripts": "cypress run",
+    "combine-reports": "mochawesome-merge ./cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "posttest": "npm run combine-reports && npm run generate-report",
+    "test" : "npm run scripts || npm run posttest",
     "cy:run:chrome": "cypress run --browser chrome --headed",
     "cy:run:firefox": "cypress run --browser firefox --headed",
     "cy:run:tradingview": "cypress run --browser chrome",
@@ -23,10 +29,17 @@
   },
   "homepage": "https://github.com/ChetanMotghare/Cypress_E2E_Framework#readme",
   "devDependencies": {
+    "@cypress/grep": "^3.1.5",
     "cypress": "^12.17.4"
   },
   "dependencies": {
     "cypress-parallel": "^0.13.0",
-    "mochawesome": "^7.1.3"
+    "mochawesome": "^7.1.3",
+    "cypress-mochawesome-reporter": "^3.5.1",
+    "cypress-multi-reporters": "^1.6.3",
+    "cypress-xpath": "^2.0.1",
+    "mocha": "^10.2.0",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

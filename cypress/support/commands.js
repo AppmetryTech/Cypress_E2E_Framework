@@ -1,5 +1,6 @@
 import { checkAlert, enterRegistrationDetails } from './utilities/registrationUtils';
 import { clickonButton } from './utilities/dashboardUtils'
+import { doLogin } from './utilities/loginUtils';
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -29,3 +30,4 @@ import { clickonButton } from './utilities/dashboardUtils'
 Cypress.Commands.add('clickonButton', clickonButton);
 Cypress.Commands.add('fillRegistrationForm', enterRegistrationDetails);
 Cypress.Commands.add('verifyAlert', checkAlert);
+Cypress.Commands.add('doLogin', doLogin);

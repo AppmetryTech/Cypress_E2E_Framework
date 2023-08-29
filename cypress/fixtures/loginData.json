@@ -1,0 +1,14 @@
+{
+  "validCred": {
+    "email": "adminUserSD2wre@gmail.com",
+    "password": "Tec@urepaord"
+  },
+  "wrongPass": {
+    "email": "adminUserSD2wre@gmail.com",
+    "password": "Tec@urepaordsfd"
+  },
+  "unregisteredEmail": {
+    "email": "admire@gmail.com",
+    "password": "Tec@urepaordsfd"
+  }
+ }
