@@ -1,106 +1,125 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 2,
-    "passes": 0,
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
     "pending": 0,
     "failures": 2,
-    "testsRegistered": 2,
-    "passPercent": 0,
+    "testsRegistered": 3,
+    "passPercent": 33.333333333333336,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2023-08-29T13:33:30.462Z",
-    "end": "2023-08-29T13:33:39.180Z",
-    "duration": 8718
+    "start": "2023-08-29T18:22:22.721Z",
+    "end": "2023-08-29T18:22:55.739Z",
+    "duration": 33018
   },
   "results": [
     {
-      "uuid": "120ebf24-455f-4f44-994e-6b60dbfb80b8",
+      "uuid": "83b29c13-dd22-4014-979c-84ca6faf5407",
       "title": "",
       "fullFile": "cypress\\e2e\\UI\\Registration\\ValidateUserRegistration.cy.js",
       "file": "cypress\\e2e\\UI\\Registration\\ValidateUserRegistration.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
-      "tests": [
+      "tests": [],
+      "suites": [
         {
-          "title": "An uncaught error was detected outside of a test",
-          "fullTitle": "An uncaught error was detected outside of a test",
-          "timedOut": null,
-          "duration": 325,
-          "state": "failed",
-          "speed": null,
-          "pass": false,
-          "fail": true,
-          "pending": false,
-          "context": null,
-          "code": "throw err;",
-          "err": {
-            "message": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot destructure property 'prevSubject' of 'options' as it is undefined.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
-            "estack": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot destructure property 'prevSubject' of 'options' as it is undefined.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Object.add (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:110929:11)\n    at <unknown> (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:110746:23)\n    at tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Object.gotValue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6476:18)\n    at Object.gotAccum (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6465:25)\n    at Object.tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromiseCtx (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1613:10)\n    at _drainQueueStep (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2411:12)\n    at _drainQueue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2286:14)",
-            "diff": null
-          },
-          "uuid": "3ccb6a94-7a2a-486e-b119-6d41fe8efb87",
-          "parentUUID": "120ebf24-455f-4f44-994e-6b60dbfb80b8",
-          "isHook": false,
-          "skipped": false
+          "uuid": "c334cac9-c8e6-43b6-8f92-f691ac3f89fe",
+          "title": "User Registration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01_Registration with blank information",
+              "fullTitle": "User Registration TC01_Registration with blank information",
+              "timedOut": null,
+              "duration": 8908,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_registrationPageSelectors.default.clickRegister).click();\ncy.get(_registrationPageSelectors.default.firstNameError).should('have.text', 'First name is required.');\ncy.get(_registrationPageSelectors.default.lastNameError).should('have.text', 'Last name is required.');\ncy.get(_registrationPageSelectors.default.emailError).should('have.text', 'Email is required.');\ncy.get(_registrationPageSelectors.default.passwordError).should('have.text', 'Password is required.');\ncy.get(_registrationPageSelectors.default.confirmPwdError).should('have.text', 'Password is required.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<span#Email-error>' to have text 'First name is required.', but the text was 'Email is required.'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<span#Email-error>' to have text 'First name is required.', but the text was 'Email is required.'\n    at Context.eval (webpack://cypress_e2e_framework/./cypress/e2e/UI/Registration/ValidateUserRegistration.cy.js:12:43)",
+                "diff": "- 'Email is required.'\n+ 'First name is required.'\n"
+              },
+              "uuid": "51ce82f7-38c2-4447-8c19-2bd477c3a81f",
+              "parentUUID": "c334cac9-c8e6-43b6-8f92-f691ac3f89fe",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC02_Registration with registered Email",
+              "fullTitle": "User Registration TC02_Registration with registered Email",
+              "timedOut": null,
+              "duration": 13475,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@registrationData').then(data => {\n  const user = data.existingEmail;\n  cy.fillRegistrationForm(user.gender, user.firstName, user.lastName, user.email, user.password, user.date, user.month, user.year);\n  cy.get(_registrationPageSelectors.default.clickRegister).click();\n  cy.get(_registrationPageSelectors.default.errorMessage).contains(\"The specified email already exists\");\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.message-error > ul > li`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.message-error > ul > li`, but never found it.\n    at Context.eval (webpack://cypress_e2e_framework/./cypress/e2e/UI/Registration/ValidateUserRegistration.cy.js:25:15)",
+                "diff": null
+              },
+              "uuid": "06bdeca7-e7e7-42b0-bea2-fced50822970",
+              "parentUUID": "c334cac9-c8e6-43b6-8f92-f691ac3f89fe",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC03_Validate Registration",
+              "fullTitle": "User Registration TC03_Validate Registration",
+              "timedOut": null,
+              "duration": 10086,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@registrationData').then(data => {\n  const user = data.validUser;\n  cy.fillRegistrationForm(user.gender, user.firstName, user.lastName, user.email, user.password, user.date, user.month, user.year);\n  cy.get(_registrationPageSelectors.default.clickRegister).click();\n  cy.get(_registrationPageSelectors.default.regSuccessMsg).should('have.text', 'Your registration completed');\n});",
+              "err": {},
+              "uuid": "fd451980-02cb-4a45-a51e-9d3ddbdb598b",
+              "parentUUID": "c334cac9-c8e6-43b6-8f92-f691ac3f89fe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd451980-02cb-4a45-a51e-9d3ddbdb598b"
+          ],
+          "failures": [
+            "51ce82f7-38c2-4447-8c19-2bd477c3a81f",
+            "06bdeca7-e7e7-42b0-bea2-fced50822970"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 32469,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
         }
       ],
-      "suites": [],
       "passes": [],
-      "failures": [
-        "3ccb6a94-7a2a-486e-b119-6d41fe8efb87"
-      ],
+      "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 325,
+      "duration": 0,
       "root": true,
-      "rootEmpty": false,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "076499a6-a407-413f-ad9c-9f4757fd0e82",
-      "title": "",
-      "fullFile": "cypress\\e2e\\UI\\Login\\ValidateLogin.cy.js",
-      "file": "cypress\\e2e\\UI\\Login\\ValidateLogin.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [
-        {
-          "title": "An uncaught error was detected outside of a test",
-          "fullTitle": "An uncaught error was detected outside of a test",
-          "timedOut": null,
-          "duration": 537,
-          "state": "failed",
-          "speed": null,
-          "pass": false,
-          "fail": true,
-          "pending": false,
-          "context": null,
-          "code": "throw err;",
-          "err": {
-            "message": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot destructure property 'prevSubject' of 'options' as it is undefined.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
-            "estack": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot destructure property 'prevSubject' of 'options' as it is undefined.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Object.add (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:110929:11)\n    at <unknown> (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:110746:23)\n    at tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Object.gotValue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6476:18)\n    at Object.gotAccum (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6465:25)\n    at Object.tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromiseCtx (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1613:10)\n    at _drainQueueStep (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2411:12)\n    at _drainQueue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2286:14)",
-            "diff": null
-          },
-          "uuid": "cacdc113-9e31-4077-a8c4-b35a0bce69ac",
-          "parentUUID": "076499a6-a407-413f-ad9c-9f4757fd0e82",
-          "isHook": false,
-          "skipped": false
-        }
-      ],
-      "suites": [],
-      "passes": [],
-      "failures": [
-        "cacdc113-9e31-4077-a8c4-b35a0bce69ac"
-      ],
-      "pending": [],
-      "skipped": [],
-      "duration": 537,
-      "root": true,
-      "rootEmpty": false,
+      "rootEmpty": true,
       "_timeout": 2000
     }
   ],

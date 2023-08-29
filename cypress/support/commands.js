@@ -1,5 +1,4 @@
-import { checkAlert, enterRegistrationDetails } from './utilities/registrationUtils';
-import { clickonButton } from './utilities/dashboardUtils'
+import { enterRegistrationDetails } from './utilities/registrationUtils';
 import { doLogin } from './utilities/loginUtils';
 
 // ***********************************************
@@ -27,7 +26,7 @@ import { doLogin } from './utilities/loginUtils';
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-Cypress.Commands.add('clickonButton', clickonButton);
+
 Cypress.Commands.add('fillRegistrationForm', enterRegistrationDetails);
-Cypress.Commands.add('verifyAlert', checkAlert);
+
 Cypress.Commands.add('doLogin', doLogin);

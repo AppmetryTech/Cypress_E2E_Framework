@@ -16,7 +16,7 @@
 // Import commands.js using ES2015 syntax:
 /// <reference types="Cypress" />
 import './commands'
-const registerCypressGrep = require('@cypress/grep')
+/*const registerCypressGrep = require('@cypress/grep')
 registerCypressGrep()
 
 import addContext from 'mochawesome/addContext'
@@ -42,7 +42,7 @@ Cypress.on('test:after:run', (test, runnable) => {
             `../screenshots/${Cypress.spec.name}/${filename}`,
         )
     }
-    // always add the video
+   
     addContext({ test }, `../videos/${Cypress.spec.name}.mp4`)
 })
 
