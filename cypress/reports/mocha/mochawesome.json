@@ -1,0 +1,92 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-08-29T13:33:30.462Z",
+    "end": "2023-08-29T13:33:31.065Z",
+    "duration": 603,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "076499a6-a407-413f-ad9c-9f4757fd0e82",
+      "title": "",
+      "fullFile": "cypress\\e2e\\UI\\Login\\ValidateLogin.cy.js",
+      "file": "cypress\\e2e\\UI\\Login\\ValidateLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 537,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot destructure property 'prevSubject' of 'options' as it is undefined.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot destructure property 'prevSubject' of 'options' as it is undefined.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Object.add (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:110929:11)\n    at <unknown> (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:110746:23)\n    at tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Object.gotValue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6476:18)\n    at Object.gotAccum (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6465:25)\n    at Object.tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromiseCtx (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:1613:10)\n    at _drainQueueStep (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2411:12)\n    at _drainQueue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:2286:14)",
+            "diff": null
+          },
+          "uuid": "cacdc113-9e31-4077-a8c4-b35a0bce69ac",
+          "parentUUID": "076499a6-a407-413f-ad9c-9f4757fd0e82",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "cacdc113-9e31-4077-a8c4-b35a0bce69ac"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 537,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
