@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 3,
+  "passes": 1,
+  "pending": 0,
+  "failures": 2,
+  "start": "2023-08-30T10:18:02.160Z",
+  "duration": 24464,
+  "file": "cypress\\e2e\\UI\\Registration\\ValidateUserRegistration.cy.js"
+}

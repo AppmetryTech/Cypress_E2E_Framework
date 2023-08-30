@@ -7,7 +7,7 @@ describe('User Registration', () => {
         cy.get(regSelector.registerPage).click();
     })
 
-    it("TC01_Registration with blank information", () => {
+    it("TC01_Registration with blank information{sanity}", () => {
         cy.get(regSelector.clickRegister).click();
         cy.get(regSelector.firstNameError).should('have.text', 'First name is required.');
         cy.get(regSelector.lastNameError).should('have.text', 'Last name is required.');
@@ -17,7 +17,7 @@ describe('User Registration', () => {
 
 
     })
-    it("TC02_Registration with registered Email", () => {
+    it("TC02_Registration with registered Email {regression}", () => {
         cy.get('@registrationData').then((data) => {
             const user = data.existingEmail;
             cy.fillRegistrationForm(user.gender, user.firstName, user.lastName, user.email, user.password, user.date, user.month, user.year);
@@ -28,7 +28,7 @@ describe('User Registration', () => {
     })
 
 
-    it('TC03_Validate Registration', () => {
+    it('TC03_Validate Registration {regression}', () => {
         cy.get('@registrationData').then((data) => {
             const user = data.validUser;
             cy.fillRegistrationForm(user.gender, user.firstName, user.lastName, user.email, user.password, user.date, user.month, user.year);

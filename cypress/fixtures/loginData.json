@@ -1,7 +1,7 @@
 {
   "validCred": {
-    "email": "adminUserSD2wre@gmail.com",
-    "password": "Tec@urepaord"
+    "email": "testuser098@gmail.com",
+    "password": "Test@1234"
   },
   "wrongPass": {
     "email": "adminUserSD2wre@gmail.com",
@@ -11,4 +11,4 @@
     "email": "admire@gmail.com",
     "password": "Tec@urepaordsfd"
   }
- }
+}

@@ -29,5 +29,10 @@ module.exports = defineConfig({
     experimentalStudio: true
   },
 
+  "env": {
+    "apiUrl": "https://dummy.restapiexample.com/api/v1",
+    // "uiUrl": ""
+  }
+
 });
 

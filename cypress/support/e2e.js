@@ -16,6 +16,8 @@
 // Import commands.js using ES2015 syntax:
 /// <reference types="Cypress" />
 import './commands'
+import registerCypressGrep from '@cypress/grep/src/support'
+registerCypressGrep()
 /*const registerCypressGrep = require('@cypress/grep')
 registerCypressGrep()
 

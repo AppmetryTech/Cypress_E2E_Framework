@@ -8,7 +8,8 @@ describe("Login Tests", () => {
         cy.get(Loginselector.loginPage).click();
     })
 
-    it("TC01_Validate-User Login With Blank Details", () => {
+    it("TC01_Validate-User Login With Blank Details  {smoke}", () => {
+        // tag: smoke
         cy.get(Loginselector.clickLogin).click();
         cy.get(Loginselector.emailError).should('have.text', 'Please enter your email');
 
@@ -25,7 +26,7 @@ describe("Login Tests", () => {
     });
 
 
-    it('TC03_Validate-User Login With Wrong Password', () => {
+    it('TC03_Validate-User Login With Wrong Password {smoke}', () => {
         cy.get('@loginData').then((data) => {
             const user = data.wrongPass;
             cy.doLogin(user.email, user.password);

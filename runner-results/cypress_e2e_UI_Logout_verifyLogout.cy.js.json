@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 2,
+  "passes": 0,
+  "pending": 0,
+  "failures": 2,
+  "start": "2023-08-30T10:17:46.200Z",
+  "duration": 14151,
+  "file": "cypress\\e2e\\UI\\Logout\\verifyLogout.cy.js"
+}
